@@ -10,6 +10,7 @@ import getAllGroup from "./routers/getAllGroups.js";
 import joinGroup from "./routers/joinOtherGroup.js";
 import getMembers from "./routers/getMembers.js";
 import getGroupThings from "./routers/getGroupThings.js"
+import cors from 'cors'
 import "./JobHandler/addJobToQueue.js"
 import "./queue.js"
 import groupSocketHandler from "./socket/groupSocketHandler.js";
@@ -20,9 +21,16 @@ const PORT = process.env.PORT || 9000;
 
 const server = http.createServer(app);
 
+app.use(cors({
+  origin: "https://1taskflow.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
+
+
 const io = new Server(server, {
   cors: {
-    origin: "*", // replace with your frontend URL in production
+    origin: "https://1taskflow.netlify.app", // replace with your frontend URL in production
     methods: ["GET", "POST"]
   }
 });
