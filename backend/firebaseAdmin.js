@@ -3,7 +3,7 @@ import fs from "fs";
 
 // Render mounts secret files here
 const serviceAccount = JSON.parse(
-  fs.readFileSync("./serviceAccount.json")
+  fs.readFileSync("/etc/secrets/pulsepingadmin.json", "utf-8")
 );
 
 admin.initializeApp({

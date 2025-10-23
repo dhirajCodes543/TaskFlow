@@ -27,7 +27,7 @@ const io = new Server(server, {
   }
 });
 
-mongoose.connect('mongodb://localhost:27017/newProject')
+mongoose.connect(process.env.MONGO_DB)
   .then(() => console.log('✅ MongoDB connected'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
 
