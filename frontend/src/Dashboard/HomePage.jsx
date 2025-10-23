@@ -42,7 +42,7 @@ export default function HomePage() {
         }
         await currentUser.reload();
         const token = await currentUser.getIdToken(true);
-        res = await axios.get('/api/group/my-groups', {
+        res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/group/my-groups`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -144,7 +144,7 @@ export default function HomePage() {
       const token = await currentUser.getIdToken(true);
 
       const res = await axios.post(
-        "/api/newGroup/create",
+        `${import.meta.env.VITE_BASE_URL}/api/newGroup/create`,
         { groupName, workers },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -195,7 +195,7 @@ export default function HomePage() {
       const token = await currentUser.getIdToken(true);
 
       const res = await axios.post(
-        "/api/otherGroup/join",
+        `${import.meta.env.VITE_BASE_URL}/api/otherGroup/join`,
         { inviteCode: joinCode },
         { headers: { Authorization: `Bearer ${token}` } }
       );

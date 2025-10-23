@@ -5,7 +5,7 @@ let socket;
 
 export const connectSocket = () => {
   if (!socket) {
-    socket = io("http://localhost:9000", {
+    socket = io(`${import.meta.env.VITE_BASE_URL}`, {
       reconnectionAttempts: 2, // retry 5 times
       reconnectionDelay: 2000, // wait 2s between retries
     });

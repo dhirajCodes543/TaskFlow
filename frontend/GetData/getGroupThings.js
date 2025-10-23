@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchGroupMembers = async (groupId, token) => {
   try {
     const res = await axios.post(
-      "/api/member/getMembers",
+      `${import.meta.env.VITE_BASE_URL}/api/member/getMembers`,
       { groupId }, //  sent in body
       {
         headers: {
@@ -26,7 +26,7 @@ export const fetchGroupMembers = async (groupId, token) => {
 export const fetchGroupChats = async (groupId, token) => {
   try {
     const res = await axios.get(
-      `/api/chat/chats/${groupId}`,
+      `${import.meta.env.VITE_BASE_URL}/api/chat/chats/${groupId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -57,7 +57,7 @@ export const fetchGroupChats = async (groupId, token) => {
 export const fetchGroupLogs = async (groupId, token) => {
   try {
     const res = await axios.get(
-      `/api/get/jobs/${groupId}`,
+      `${import.meta.env.VITE_BASE_URL}/api/get/jobs/${groupId}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

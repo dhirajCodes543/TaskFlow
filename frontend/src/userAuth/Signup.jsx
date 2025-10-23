@@ -132,7 +132,7 @@ export default function SignupPage() {
       const currentUser = auth.currentUser;
       const token = await currentUser.getIdToken(true);
       try {
-        const res = await axios.post("/api/user/signup",
+        const res = await axios.post(`${import.meta.env.VITE_BASE_URL}/api/user/signup`,
           {},
           { headers : { Authorization: `Bearer ${token}` } }
         )

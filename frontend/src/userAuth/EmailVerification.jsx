@@ -28,7 +28,7 @@ export default function EmailVerificationPage() {
       const token = await currentUser.getIdToken(true);
       
       const res = await axios.post(
-        "/api/user/signup",
+        `${import.meta.env.VITE_BASE_URL}/api/user/signup`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
