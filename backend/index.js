@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import { Server } from "socket.io";
 import authenticateFirebaseToken from "./middleware/authMiddleware.js";
 import mongoose from "mongoose";
-import userRouter from "./routers/signUp.js";
+import userRouter from "./routers/signup.js";
 import createGroupRouter from "./routers/groupCreation.js";
 import getAllGroup from "./routers/getAllGroups.js";
 import joinGroup from "./routers/joinOtherGroup.js";
