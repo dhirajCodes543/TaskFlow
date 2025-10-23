@@ -16,7 +16,7 @@ import groupSocketHandler from "./socket/groupSocketHandler.js";
 
 dotenv.config();
 const app = express();
-const PORT = 9000;
+const PORT = process.env.PORT || 9000;
 
 const server = http.createServer(app);
 
