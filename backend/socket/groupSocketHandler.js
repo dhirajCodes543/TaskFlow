@@ -1,4 +1,4 @@
-import CHAT from "../models/Chat.js";
+import CHAT from "../models/chat.js";
 import USER from "../models/user.js";
 import { sendJobHandler } from "../JobHandler/addJobToQueue.js";
 
