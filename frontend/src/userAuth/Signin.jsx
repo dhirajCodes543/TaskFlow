@@ -8,7 +8,7 @@ import {
   GoogleAuthProvider,
   sendPasswordResetEmail
 } from 'firebase/auth';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 import { auth } from '../firebase.js';
 import axios from 'axios';
 

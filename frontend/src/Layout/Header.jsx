@@ -3,7 +3,7 @@ import { Sun, Moon, Home, Mail, LogOut, LogIn, UserPlus, Menu, X } from 'lucide-
 import { signOut } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 import { useAuthStore } from '../stores/AuthStore.js';
 import { auth } from '../firebase.js';
 

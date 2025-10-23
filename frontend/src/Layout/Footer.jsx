@@ -1,7 +1,7 @@
 import React from 'react';
 import { Mail, Heart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 
 export default function Footer() {
   const { darkMode } = useThemeStore();

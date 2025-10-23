@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Mail, RefreshCw, CheckCircle } from 'lucide-react';
 import { toast } from 'react-toastify';
 import { onAuthStateChanged, sendEmailVerification } from 'firebase/auth';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 import { auth } from '../firebase.js';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';

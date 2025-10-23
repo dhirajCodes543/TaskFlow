@@ -7,7 +7,7 @@ import axios from 'axios';
 import { useRef } from 'react';
 import { getSocket } from '../stores/SocketManager.js';
 import { auth } from '../firebase.js';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 
 export default function HomePage() {
   const { darkMode } = useThemeStore();

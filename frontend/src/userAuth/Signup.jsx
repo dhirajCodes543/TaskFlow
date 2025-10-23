@@ -9,7 +9,7 @@ import {
   GoogleAuthProvider,
   sendEmailVerification 
 } from 'firebase/auth';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 import { auth } from '../firebase.js';
 
 const googleProvider = new GoogleAuthProvider();

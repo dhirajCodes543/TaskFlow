@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Users, MessageCircle, List, AlertCircle, CheckCircle, Clock, XCircle, Loader } from 'lucide-react';
-import useThemeStore from '../stores/themeStore.js';
+import useThemeStore from '../stores/ThemeStore.js';
 import { useParams } from "react-router-dom";
 import { fetchGroupMembers, fetchGroupChats, fetchGroupLogs } from '../../GetData/getGroupThings.js';
 import { auth } from '../firebase.js';
